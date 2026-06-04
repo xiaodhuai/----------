@@ -1,0 +1,19 @@
+# Keil MDK-ARM 编译生成的临时文件和不需要备份的文件
+*.o
+*.d
+*.crf
+*.htm
+*.dep
+*.lnp
+*.axf
+*.sct
+*.hex
+*.bin
+*.map
+*.build_log.htm
+*.bak
+*.scvd
+RTE/
+DebugConfig/
+*.uvguix.*
+*.uvoptx
