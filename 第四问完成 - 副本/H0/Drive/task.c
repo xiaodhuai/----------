@@ -94,7 +94,7 @@ static void Run_Task_2(void)//一圈八字
             target_angle = -38.0f;  // 雿?蝚砌?銝芸笆閫瑪閫漲
 
             wait_tick++;
-            if (wait_tick >= 10)    // 10ms * 70 = 700ms 撘箄?頧砍摩撟嗆??迅摰?
+            if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    // 10ms * 70 = 700ms 撘箄?頧砍摩撟嗆??迅摰?
             {
                 count = 0;         
                 current_state = 1;  // ?園?堆????C ?寧蝥踹??
@@ -127,7 +127,7 @@ static void Run_Task_2(void)//一圈八字
             count = 1;              // ?香霈⊥嚗甇Ｗ??唳?摨憯啣僕??
 
             wait_tick++;
-            if (wait_tick >= 10)    // 撘箄??迫 700ms ?Ｗ?憪踵?
+            if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    // 撘箄??迫 700ms ?Ｗ?憪踵?
             {
                 count = 1;       
                 current_state = 3;  // 餈?嗆?3嚗?憪??敺芾蕨
@@ -158,7 +158,7 @@ static void Run_Task_2(void)//一圈八字
             target_angle = -144.0f; // 頧游笆蝘啁?蝚砌?銝芾?摨?
 
             wait_tick++;
-            if (wait_tick >= 10)    // ?脫?恣??700ms
+            if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    // ?脫?恣??700ms
             {
                 count = 2;
                 current_state = 5;  // ?園?堆???D ?寧蝥踹??
@@ -187,7 +187,7 @@ static void Run_Task_2(void)//一圈八字
 					base_speed = 0;
             target_angle = 180.0f;  // ???迤 180 摨
             wait_tick++;
-            if (wait_tick >= 10)    // ?脫?恣??700ms
+            if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    // ?脫?恣??700ms
             {
                 count = 3;
                 current_state = 7;  // 餈?嗆?7嚗?憪椰??敺芾蕨??A
@@ -328,7 +328,7 @@ switch(current_state)
             target_angle = -38.0f;  // 雿?蝚砌?銝芸笆閫瑪閫漲
 
             wait_tick++;
-            if (wait_tick >= 10)    // 10ms * 70 = 700ms 撘箄?頧砍摩撟嗆??迅摰?
+            if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    // 10ms * 70 = 700ms 撘箄?頧砍摩撟嗆??迅摰?
             {
                 count = 0;         
                 current_state = 1;  // ?園?堆????C ?寧蝥踹??
@@ -361,7 +361,7 @@ switch(current_state)
             count = 1;              // ?香霈⊥嚗甇Ｗ??唳?摨憯啣僕??
 
             wait_tick++;
-            if (wait_tick >= 10)    // 撘箄??迫 700ms ?Ｗ?憪踵?
+            if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    // 撘箄??迫 700ms ?Ｗ?憪踵?
             {
                 count = 1;       
                 current_state = 3;  // 餈?嗆?3嚗?憪??敺芾蕨
@@ -392,7 +392,7 @@ switch(current_state)
             target_angle = -144.0f; // 頧游笆蝘啁?蝚砌?銝芾?摨?
 
             wait_tick++;
-            if (wait_tick >= 10)    // ?脫?恣??700ms
+            if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    // ?脫?恣??700ms
             {
                 count = 2;
                 current_state = 5;  // ?園?堆???D ?寧蝥踹??
@@ -421,7 +421,7 @@ switch(current_state)
 					base_speed = 0;
             target_angle = 180.0f;  // ???迤 180 摨
             wait_tick++;
-            if (wait_tick >= 10)    // ?脫?恣??700ms
+            if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    // ?脫?恣??700ms
             {
                 count = 3;
                 current_state = 7;  // 餈?嗆?7嚗?憪椰??敺芾蕨??A
@@ -492,7 +492,7 @@ switch(current_state)
         target_angle = -38.0f;  
 
         wait_tick++;
-        if (wait_tick >= 10)    // 700ms 
+        if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    // 700ms 
         {
             count = 0;         
             current_state = 1;  
@@ -517,7 +517,7 @@ switch(current_state)
         target_angle = 0.0f;            
 
         wait_tick++;
-        if (wait_tick >= 10)    
+        if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
         {
             count = 1;       
             current_state = 3;  
@@ -542,7 +542,7 @@ switch(current_state)
         target_angle = -146.0f; 
 
         wait_tick++;
-        if (wait_tick >= 10)    
+        if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
         {
             count = 2;
             current_state = 5;  
@@ -567,7 +567,7 @@ switch(current_state)
         target_angle = 180.0f;  
         
         wait_tick++;
-        if (wait_tick >= 10)    
+        if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
         {
             count = 3;
             current_state = 7;  
@@ -599,7 +599,7 @@ switch(current_state)
         target_angle = -34.0f;  
 
         wait_tick++;
-        if (wait_tick >= 10)    
+        if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
         {
             count = 0;         
             current_state = 11;  
@@ -624,7 +624,7 @@ switch(current_state)
         target_angle = 0.0f;           
 
         wait_tick++;
-        if (wait_tick >= 10)    
+        if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
         {
             count = 1;       
             current_state = 13;  
@@ -649,7 +649,7 @@ switch(current_state)
         target_angle = -148.0f; 
 
         wait_tick++;
-        if (wait_tick >= 10)    
+        if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
         {
             count = 2;
             current_state = 15;  
@@ -673,7 +673,7 @@ switch(current_state)
         target_angle = 180.0f;  
         
         wait_tick++;
-        if (wait_tick >= 10)    
+        if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
         {
             count = 3;
             current_state = 17;  
@@ -705,7 +705,7 @@ switch(current_state)
         target_angle = -37.0f;  
 
         wait_tick++;
-        if (wait_tick >= 10)    
+        if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
         {
             count = 0;         
             current_state = 21;  
@@ -731,7 +731,7 @@ switch(current_state)
         count = 1;              
 
         wait_tick++;
-        if (wait_tick >= 10)    
+        if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
         {
             count = 1;       
             current_state = 23;  
@@ -756,7 +756,7 @@ switch(current_state)
         target_angle = -146.0f; 
 
         wait_tick++;
-        if (wait_tick >= 10)    
+        if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
         {
             count = 2;
             current_state = 25;  
@@ -781,7 +781,7 @@ switch(current_state)
         target_angle = 180.0f;  
         
         wait_tick++;
-        if (wait_tick >= 10)    
+        if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
         {
             count = 3;
             current_state = 27;  
@@ -805,7 +805,7 @@ switch(current_state)
             target_angle = -38.0f;  
 
             wait_tick++;
-            if (wait_tick >= 10)    
+            if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
             {
                 count = 0;         
                 current_state = 29;  
@@ -831,7 +831,7 @@ switch(current_state)
             count = 1;              
 
             wait_tick++;
-            if (wait_tick >= 10)    
+            if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
             {
                 count = 1;       
                 current_state = 31;  
@@ -857,7 +857,7 @@ switch(current_state)
             target_angle = -147.0f; 
 
             wait_tick++;
-            if (wait_tick >= 10)    
+            if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
             {
                 count = 2;
                 current_state = 33;  
@@ -882,7 +882,7 @@ switch(current_state)
             target_angle = 180.0f;  
             
             wait_tick++;
-            if (wait_tick >= 10)    
+            if (wait_tick >= 70 && fabs(target_angle - current_angle) < 5.0f)    
             {
                 count = 3;
                 current_state = 35;  
